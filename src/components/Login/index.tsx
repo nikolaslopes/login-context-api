@@ -1,5 +1,9 @@
+import './styles.css';
+
 export const Login = () => {
   return (
-   <h1>aa</h1>
+    <div className="container">
+      <p>aa</p>
+    </div>
   );
 }

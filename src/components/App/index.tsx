@@ -5,24 +5,23 @@ import { Login } from './components/Login';
 
 import { AuthProvider } from './context/AuthProvider';
 
-import './index.css';
-
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/profile"
-            element={
+          <Route
+            path="/profile"
+            element={(
               <ProtectedLayout>
                 <h1>You are authenticated</h1>
               </ProtectedLayout>
-            }
+            )}
           />
-          <Route path="/login" element={<Login />}/>
+          <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
-  )
+  );
 }
 export default App;

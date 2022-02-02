@@ -1,0 +1,9 @@
+.container {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto !important;
+  width: 720px;
+  height: 430px;
+}
