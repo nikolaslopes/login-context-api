@@ -1,13 +1,8 @@
-export interface IUser {
-  emai?: string;
-  token?: string;
-}
+import React, { createContext, useState } from 'react';
+import { IAuthProvider, IContext, IUser } from './types';
 
-export interface IContext extends IUser {
-  authenticate: (email: string, password: string) => Promise<void>;
-  logout: () => void;
-}
+export const AuthContext = createContext<IContext>({} as IContext);
 
-export interface IAuthProvider {
-  children: JSX.Element;
+export const AuthProvider = ({ children }: IAuthProvider) => {
+  const [user, setUser] = useState<IUser | null>();
 }
