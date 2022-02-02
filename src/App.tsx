@@ -1,7 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { ProtectedLayout } from './components/ProtectedLayout';
-import { AuthProvider } from './context/AuthProvider';
 
+import { ProtectedLayout } from './components/ProtectedLayout';
+import { Login } from './components/Login';
+
+import { AuthProvider } from './context/AuthProvider';
 
 function App() {
   return (
@@ -15,8 +17,7 @@ function App() {
               </ProtectedLayout>
             }
           />
-
-          <Route path="/login" element={<h1>aaa</h1>}/>
+          <Route path="/login" element={<Login />}/>
         </Routes>
       </BrowserRouter>
     </AuthProvider>
