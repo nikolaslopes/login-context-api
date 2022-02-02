@@ -1,5 +1,5 @@
 export interface IUser {
-  emai?: string;
+  email?: string;
   token?: string;
 }
 
