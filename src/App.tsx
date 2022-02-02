@@ -5,6 +5,8 @@ import { Login } from './components/Login';
 
 import { AuthProvider } from './context/AuthProvider';
 
+import './index.css';
+
 function App() {
   return (
     <AuthProvider>
