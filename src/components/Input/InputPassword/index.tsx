@@ -21,10 +21,12 @@ export function InputPassword({ widthInput }: IInputPassword) {
 
   return (
     <Container widthInput={widthInput}>
-      <input type={viewLoginPassword === false ? 'password' : 'text'} />
-      <button type="button" onClick={toggleViewPassword}>
-        {viewLoginPassword ? <BsEyeSlashFill /> : <BsEyeFill />}
-      </button>
+      <div>
+        <input type={viewLoginPassword === false ? 'password' : 'text'} />
+        <button type="button" onClick={toggleViewPassword}>
+          {viewLoginPassword ? <BsEyeSlashFill /> : <BsEyeFill />}
+        </button>
+      </div>
     </Container>
   );
 }

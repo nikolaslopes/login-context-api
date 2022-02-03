@@ -4,16 +4,19 @@ import { IInputField } from './types';
 
 export const formElementsCSS = css`
   width: 100%;
-  border: none;
+  border: 1px solid;
   background: #0000000b;
-  border-radius: 4px 4px 0px 0px;
-  letter-spacing: inherit;
+  border-radius: 10px;
   -webkit-tap-highlight-color: transparent;
   height: 52px;
   outline: none;
   padding: 16.5px 14px;
   color: #202020;
   font-size: 16px;
+
+  :hover {
+    border: 3px solid;
+  }
 `;
 
 export const Input = styled.input<IInputField>`
