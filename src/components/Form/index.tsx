@@ -4,7 +4,7 @@ import { Container } from './styles';
 export function Form() {
   return (
     <Container>
-      <InputPassword />
+      <InputPassword widthInput="300px" />
     </Container>
   );
 }
