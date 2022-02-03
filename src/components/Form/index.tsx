@@ -5,7 +5,9 @@ import { Container } from './styles';
 export function Form() {
   return (
     <Container>
-      <Input placeholder="E-mail" />
+      <div className="first-input">
+        <Input placeholder="E-mail" />
+      </div>
       <InputPassword placeholder="Password" />
     </Container>
   );
