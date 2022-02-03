@@ -1,27 +1,24 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 
-import { ProtectedLayout } from './components/ProtectedLayout';
-import { Login } from './components/Login';
-
-import { AuthProvider } from './context/AuthProvider';
+import GlobalStyles from '../../assets/styles/global';
+import { defaultTheme } from '../../assets/styles/themes/default';
+import { AuthProvider } from '../../context/AuthProvider';
+import { Routes } from '../../Routes';
+import { Container } from './styles';
 
 function App() {
   return (
-    <AuthProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path="/profile"
-            element={(
-              <ProtectedLayout>
-                <h1>You are authenticated</h1>
-              </ProtectedLayout>
-            )}
-          />
-          <Route path="/login" element={<Login />} />
-        </Routes>
-      </BrowserRouter>
-    </AuthProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={defaultTheme}>
+        <GlobalStyles />
+        <Container>
+          <AuthProvider>
+            <Routes />
+          </AuthProvider>
+        </Container>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 export default App;

@@ -1,6 +1,4 @@
-import './styles.css';
-
-export const Login = () => {
+export function Form() {
   return (
     <div className="container">
       <p>aa</p>

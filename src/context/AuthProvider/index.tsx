@@ -1,10 +1,11 @@
 import React, { createContext, useEffect, useState } from 'react';
+
 import { IAuthProvider, IContext, IUser } from './types';
 import { getUserLocalStorage, LoginRequest, setUserLocalStorage } from './util';
 
 export const AuthContext = createContext<IContext>({} as IContext);
 
-export const AuthProvider = ({ children }: IAuthProvider) => {
+export function AuthProvider({ children }: IAuthProvider) {
   const [user, setUser] = useState<IUser | null>();
 
   useEffect(() => {
@@ -30,7 +31,7 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
   }
 
   return (
-    <AuthContext.Provider value={{...user, authenticate, logout }}>
+    <AuthContext.Provider value={{ ...user, authenticate, logout }}>
       {children}
     </AuthContext.Provider>
   );
