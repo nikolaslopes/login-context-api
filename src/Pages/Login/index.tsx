@@ -1,9 +1,10 @@
+import { Form } from '../../components/Form';
 import { Container } from './styles';
 
 export function Login() {
   return (
     <Container>
-      <h1>Login</h1>
+      <Form />
     </Container>
   );
 }

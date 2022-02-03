@@ -1,7 +1,10 @@
+import { InputPassword } from '../Input/InputPassword';
+import { Container } from './styles';
+
 export function Form() {
   return (
-    <div className="container">
-      <p>aa</p>
-    </div>
+    <Container>
+      <InputPassword />
+    </Container>
   );
 }

@@ -1,6 +1,6 @@
 export const defaultTheme = {
   colors: {
-    background: '#040404',
+    background: '#0A1929',
     primary: {
       main: '#0A1929',
     },
