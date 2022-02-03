@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background-color: aliceblue;
+  border: 2px solid ${({ theme }) => theme.colors.primary.main};
+  border-radius: 8px;
+  box-shadow: 0px 24px 38px #00000024;
 
   width: 800px;
   height: 600px;

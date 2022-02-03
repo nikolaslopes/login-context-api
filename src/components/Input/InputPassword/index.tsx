@@ -8,7 +8,7 @@ export interface IInputPassword extends InputHTMLAttributes<HTMLInputElement> {
   widthInput?: string;
 }
 
-export function InputPassword({ widthInput }: IInputPassword) {
+export function InputPassword({ widthInput, ...rest }: IInputPassword) {
   const [viewLoginPassword, setViewLoginPassword] = useState(false);
 
   function toggleViewPassword() {
@@ -22,9 +22,16 @@ export function InputPassword({ widthInput }: IInputPassword) {
   return (
     <Container widthInput={widthInput}>
       <div>
-        <input type={viewLoginPassword === false ? 'password' : 'text'} />
+        <input
+          type={viewLoginPassword === false ? 'password' : 'text'}
+          {...rest}
+        />
         <button type="button" onClick={toggleViewPassword}>
-          {viewLoginPassword ? <BsEyeSlashFill /> : <BsEyeFill />}
+          {viewLoginPassword ? (
+            <BsEyeSlashFill style={{ color: '#fff' }} />
+          ) : (
+            <BsEyeFill style={{ color: '#fff' }} />
+          )}
         </button>
       </div>
     </Container>

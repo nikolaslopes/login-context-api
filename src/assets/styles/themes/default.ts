@@ -1,8 +1,11 @@
 export const defaultTheme = {
   colors: {
-    background: '#0A1929',
+    background: 'rgb(36, 36, 36)',
     primary: {
-      main: '#0A1929',
+      lighter: '#cc84fb',
+      light: '#a224f5',
+      main: '#820AD1',
+      dark: '#6a06ab',
     },
   },
 };

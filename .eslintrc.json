@@ -27,6 +27,7 @@
   ],
   "rules": {
       "camelcase": "off",
+      "react/jsx-props-no-spreading": "off",
       "import/no-unresolved": "error",
       "@typescript-eslint/naming-convention": [
           "error",
