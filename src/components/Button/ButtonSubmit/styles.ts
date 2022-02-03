@@ -15,10 +15,10 @@ export const ButtonField: any = styled.div<IButtonSubmit>`
     font-weight: 700;
     background: ${({ theme }) => theme.colors.primary.main};
     color: #fff;
-    transition: filter 0.2s ease-out;
+    transition: all 0.2s ease-out;
 
     &:hover {
-      filter: brightness(0.8);
+      background: ${({ theme }) => theme.colors.primary.light};
     }
 
     &:active {

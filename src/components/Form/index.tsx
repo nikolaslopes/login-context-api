@@ -1,3 +1,4 @@
+import { ButtonSubmit } from '../Button/ButtonSubmit';
 import { Input } from '../FormElements';
 import { InputPassword } from '../Input/InputPassword';
 import { Container } from './styles';
@@ -9,6 +10,8 @@ export function Form() {
         <Input placeholder="E-mail" />
       </div>
       <InputPassword placeholder="Password" />
+
+      <ButtonSubmit label="Sign In" type="submit" widthButton="100px" />
     </Container>
   );
 }
