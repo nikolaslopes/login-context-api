@@ -7,8 +7,6 @@ import { Login } from '../Pages/Login';
 export function Routes() {
   return (
     <RoutesWrapper>
-      <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
       <Route
         path="/profile"
         element={
@@ -17,6 +15,8 @@ export function Routes() {
           </ProtectedLayout>
         }
       />
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
     </RoutesWrapper>
   );
 }

@@ -19,6 +19,10 @@ export const ButtonField: any = styled.div<IButtonSubmit>`
 
     &:hover {
       background: ${({ theme }) => theme.colors.primary.light};
+      box-shadow: 0px 4px 25px -10px rgba(252, 189, 56, 0.3);
+      font-size: 18px;
+      width: calc(${({ widthButton }) => `${widthButton}`} + (20px));
+      height: calc(${({ heightButton }) => `${heightButton}`} + (20px));
     }
 
     &:active {
