@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 import { useAuth } from '../../context/AuthProvider/useAuth';
 import { ButtonSubmit } from '../Button/ButtonSubmit';
@@ -21,8 +22,19 @@ export function Form() {
       await auth.authenticate(email, password);
 
       navigate('/profile');
+      toast.success('Bem vindo!', {
+        autoClose: 2000,
+      });
     } catch (error) {
-      alert('Invalid email or password');
+      toast.error('Credenciais Inválidas!', {
+        position: 'top-right',
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
   }
 
