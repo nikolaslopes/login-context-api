@@ -1,5 +1,5 @@
 import { BrowserRouter } from 'react-router-dom';
-import { toast, ToastContainer } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import { ThemeProvider } from 'styled-components';
 
 import GlobalStyles from '../../assets/styles/global';
