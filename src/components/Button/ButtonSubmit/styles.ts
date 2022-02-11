@@ -5,28 +5,32 @@ import { IButtonSubmit } from './types';
 
 const containerAnimation: Variants = {
   hidden: {
-    x: -20,
-    opacity: 0,
+    y: -100,
   },
   visible: {
-    x: 0,
-    opacity: 1,
+    y: 0,
     transition: {
-      duration: 1.1,
+      duration: 1.25,
       type: 'spring',
-      bounce: 0.75,
+      bounce: 0.6,
     },
   },
 };
 
 export const ContainerAnimation = styled(motion.div).attrs(() => ({
-  variants: containerAnimation,
+  // variants: containerAnimation,
+  // initial: 'hidden',
+  // animation: 'visible',
 }))``;
 
-export const ButtonField: any = styled.div<IButtonSubmit>`
+export const ButtonField: any = styled(motion.div).attrs(() => ({
+  variants: containerAnimation,
+  initial: 'hidden',
+  animation: 'visible',
+}))`
   button {
-    width: ${({ widthButton }) => widthButton || '338px'};
-    height: ${({ heightButton }) => heightButton || '55px'};
+    width: ${({ widthButton }: IButtonSubmit) => widthButton || '338px'};
+    height: ${({ heightButton }: IButtonSubmit) => heightButton || '55px'};
 
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.04);
     border-radius: 7px;
