@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const containerVariants: Variants = {
   hidden: {
-    y: 40,
+    y: 200,
     opacity: 0,
   },
   visible: {
