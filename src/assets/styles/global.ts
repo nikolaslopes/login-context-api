@@ -13,6 +13,10 @@ export default createGlobalStyle`
     font-size: 16px;
   }
 
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
   button {
     cursor: pointer;
   }
