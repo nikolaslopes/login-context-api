@@ -1,6 +1,29 @@
+import { motion, Variants } from 'framer-motion';
 import styled from 'styled-components';
 
 import { IButtonSubmit } from './types';
+
+const containerAnimation: Variants = {
+  hidden: {
+    x: 0,
+    y: 0,
+    scale: 0,
+  },
+  visible: {
+    x: 0,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.7,
+      type: 'spring',
+      bounce: 0.55,
+    },
+  },
+};
+
+export const ContainerAnimation = styled(motion.div).attrs(() => ({
+  variants: containerAnimation,
+}))``;
 
 export const ButtonField: any = styled.div<IButtonSubmit>`
   button {

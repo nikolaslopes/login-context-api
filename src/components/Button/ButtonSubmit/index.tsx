@@ -1,4 +1,4 @@
-import { ButtonField } from './styles';
+import { ContainerAnimation, ButtonField } from './styles';
 import { IButtonSubmit } from './types';
 
 export function ButtonSubmit({
@@ -8,11 +8,13 @@ export function ButtonSubmit({
   ...rest
 }: IButtonSubmit) {
   return (
-    <ButtonField widthButton={widthButton} heightButton={heightButton}>
-      <button type="button" {...rest}>
-        {label}
-      </button>
-    </ButtonField>
+    <ContainerAnimation>
+      <ButtonField widthButton={widthButton} heightButton={heightButton}>
+        <button type="button" {...rest}>
+          {label}
+        </button>
+      </ButtonField>
+    </ContainerAnimation>
   );
 }
 
