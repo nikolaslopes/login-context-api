@@ -5,18 +5,16 @@ import { IButtonSubmit } from './types';
 
 const containerAnimation: Variants = {
   hidden: {
-    x: 0,
-    y: 0,
-    scale: 0,
+    x: -20,
+    opacity: 0,
   },
   visible: {
     x: 0,
-    y: 0,
-    scale: 1,
+    opacity: 1,
     transition: {
-      duration: 0.7,
+      duration: 1.1,
       type: 'spring',
-      bounce: 0.55,
+      bounce: 0.75,
     },
   },
 };

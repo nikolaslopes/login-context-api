@@ -9,11 +9,13 @@ export function ButtonSubmit({
 }: IButtonSubmit) {
   return (
     <ContainerAnimation>
-      <ButtonField widthButton={widthButton} heightButton={heightButton}>
-        <button type="button" {...rest}>
-          {label}
-        </button>
-      </ButtonField>
+      <div>
+        <ButtonField widthButton={widthButton} heightButton={heightButton}>
+          <button type="button" {...rest}>
+            {label}
+          </button>
+        </ButtonField>
+      </div>
     </ContainerAnimation>
   );
 }
