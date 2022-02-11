@@ -1,5 +1,3 @@
-# readme
-
 # Login using Context API
 
 > The purpose of this project is not to be a huge application
