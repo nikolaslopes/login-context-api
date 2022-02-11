@@ -1,33 +1,8 @@
-import { motion, Variants } from 'framer-motion';
 import styled from 'styled-components';
 
 import { IButtonSubmit } from './types';
 
-const containerAnimation: Variants = {
-  hidden: {
-    y: -100,
-  },
-  visible: {
-    y: 0,
-    transition: {
-      duration: 1.25,
-      type: 'spring',
-      bounce: 0.6,
-    },
-  },
-};
-
-export const ContainerAnimation = styled(motion.div).attrs(() => ({
-  // variants: containerAnimation,
-  // initial: 'hidden',
-  // animation: 'visible',
-}))``;
-
-export const ButtonField: any = styled(motion.div).attrs(() => ({
-  variants: containerAnimation,
-  initial: 'hidden',
-  animation: 'visible',
-}))`
+export const ButtonField: any = styled.div`
   button {
     width: ${({ widthButton }: IButtonSubmit) => widthButton || '338px'};
     height: ${({ heightButton }: IButtonSubmit) => heightButton || '55px'};
