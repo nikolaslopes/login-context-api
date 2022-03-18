@@ -8,7 +8,7 @@
 - Download the ***zip*** or ***clone*** project
 - Open the terminal and ***execute***: `cd login-context-api-main`
 - Open the terminal again and ***execute***: `yarn`  to install the dependencies
-- Then, run in terminal and ***execute*** again: `yarn start`
+- Then, run in terminal and ***execute*** again: `yarn dev`
 - Open in the`Browser`: [http://localhost:3000](http://localhost:3000/)
 
 > To login in application and check the Local Storage, you should use: [Reqres](https://reqres.in/)
