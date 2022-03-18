@@ -11,7 +11,7 @@ export function Routes() {
         path="/profile"
         element={
           <ProtectedLayout>
-            <h1>You are authenticated</h1>
+            <h1>You are authenticated :)</h1>
           </ProtectedLayout>
         }
       />
